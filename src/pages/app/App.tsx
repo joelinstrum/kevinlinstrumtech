@@ -1,9 +1,18 @@
-function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ROUTES from "utils/routes";
+import Home from "../home";
+import "components/theme/fonts/fonts.scss";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">KlinsTrim LLC</header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

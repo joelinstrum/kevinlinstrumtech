@@ -1,4 +1,42 @@
+// use this import to try different color palettes, then update the defaultTheme json below
+import theme from "./themes/gold-grey-blue";
+
 export const defaultTheme = {
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          margin: 0,
+          padding: 0,
+          backgroundColor: theme.mainBackground,
+        },
+      },
+    },
+  },
+  palette: {
+    background: {
+      default: theme.mainBackground,
+    },
+    header: {
+      background: theme.headerBackground,
+      color: theme.headerFontColor,
+      linkColor: theme.headerLinkColor,
+      headerBorderColor: theme.headerBorderColor,
+      menuItemsColor: theme.menuItemsColor,
+    },
+    primary: {
+      main: theme.primaryColor,
+    },
+    secondary: {
+      main: theme.secondaryColor,
+    },
+    rotation: {
+      titleColor: theme.rotationTitleColor,
+      textColor: theme.rotationTextColor,
+      backgroundColor: theme.rotationBackground,
+      borderColor: theme.primaryColor,
+    },
+  },
   typography: {
     fontFamily: [
       "-apple-system",

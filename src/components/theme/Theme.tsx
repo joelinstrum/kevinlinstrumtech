@@ -11,19 +11,17 @@ const Theme: FC<ITheme> = ({ children }) => {
   const theme = createTheme({
     ...defaultTheme,
     ...{
-      components: {
-        MuiLink: {
-          styleOverrides: {
-            root: {
-              cursor: "pointer",
-            },
+      MuiLink: {
+        styleOverrides: {
+          root: {
+            cursor: "pointer",
           },
         },
-        MuiTypography: {
-          styleOverrides: {
-            root: {
-              padding: 0,
-            },
+      },
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            padding: 0,
           },
         },
       },
