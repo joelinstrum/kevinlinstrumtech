@@ -1,8 +1,6 @@
-import {} from "constants";
 import { styled } from "@mui/system";
-import { company, menu } from "../../../constants";
 
-const MenuRowStyled = styled("section")(({ theme }) => ({
+const SiteMenuStyled = styled("section")(({ theme }) => ({
   marginTop: "20px",
   marginBottom: "20px",
   "& > div:nth-of-type(1)": {
@@ -51,6 +49,14 @@ const MenuRowStyled = styled("section")(({ theme }) => ({
             fontSize: "15px",
             marginLeft: "40px",
             fontFamily: "Raleway",
+            "& a": {
+              color: theme.palette.secondary.main,
+              textDecoration: "none",
+              "&:hover": {
+                color: theme.palette.primary.main,
+                textDecoration: "underline",
+              },
+            },
           },
         },
       },
@@ -58,26 +64,4 @@ const MenuRowStyled = styled("section")(({ theme }) => ({
   },
 }));
 
-const MenuRow = () => (
-  <MenuRowStyled>
-    <div>
-      <div>
-        <section>
-          <h2>{company.NAME}</h2>
-          <h5>{company.TAGLINE}</h5>
-        </section>
-      </div>
-      <div>
-        <ul>
-          <li>{menu.HOME}</li>
-          <li>{menu.SERVICES}</li>
-          <li>{menu.PROJECTS}</li>
-          <li>{menu.ABOUT}</li>
-          <li>{menu.CONTACT}</li>
-        </ul>
-      </div>
-    </div>
-  </MenuRowStyled>
-);
-
-export default MenuRow;
+export default SiteMenuStyled;

@@ -10,6 +10,8 @@ const goldGreyBlue = {
   rotationTitleColor: "#fff",
   rotationTextColor: "rgba(255, 255, 255, 0.8)",
   rotationBackground: "rgba(0, 0, 0, .8)",
+  linkColor: "#333",
+  linkHover: "#F4BC16",
 };
 
 export default goldGreyBlue;

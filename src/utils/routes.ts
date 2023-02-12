@@ -1,7 +1,9 @@
 enum ROUTES {
-  APP = "/app",
-  USER = "/contact",
   HOME = "/",
+  SERVICES = "/services",
+  CONTACT = "/contact",
+  PROJECTS = "/projects",
+  ABOUT = "/about",
 }
 
 export default ROUTES;

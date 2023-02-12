@@ -12,6 +12,17 @@ export const defaultTheme = {
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: theme.secondaryColor,
+          cursor: "pointer",
+          "&:hover": {
+            color: theme.primaryColor,
+          },
+        },
+      },
+    },
   },
   palette: {
     background: {

@@ -1,7 +1,6 @@
-import ContainerOuter from "components/container-outer/ContainerOuter";
-import ContainerInner from "components/container-inner/ContainerInner";
+import { ContainerOuter, ContainerInner, SiteMenu } from "components";
 import HeaderStyled from "./HeaderStyled";
-import { Contact, MenuRow } from "./components";
+import { Contact } from "./components";
 
 const Header = () => (
   <ContainerOuter style={{ margin: "0 auto" }}>
@@ -11,7 +10,7 @@ const Header = () => (
       </ContainerInner>
     </HeaderStyled>
     <ContainerInner>
-      <MenuRow />
+      <SiteMenu />
     </ContainerInner>
   </ContainerOuter>
 );
