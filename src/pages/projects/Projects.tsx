@@ -14,12 +14,13 @@ const Projects = () => {
     <ContainerOuter>
       <Header />
       <ContainerInner>
+        <Spacer height={40} />
         <PageBlurb
           title={pageProjectsText.TITLE}
           text={pageProjectsText.TEXT}
         />
-        <Spacer height={40} />
-        <ImageGallery imageGallery={projectGalleries} />
+        <Spacer height={20} />
+        <ImageGallery imageGalleries={projectGalleries} />
       </ContainerInner>
     </ContainerOuter>
   );

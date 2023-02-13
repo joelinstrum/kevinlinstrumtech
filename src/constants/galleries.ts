@@ -27,7 +27,7 @@ const projectGalleries: IGalleries = {
       },
       {
         name: "Image install one",
-        src: "projects/sample/office-building1.jpeg",
+        src: "projects/sample/office-building-1.jpeg",
         caption: "working on something",
         sort: 1,
       },

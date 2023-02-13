@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 import { ImageGalleryThumbnails, ImageGalleryDetails } from "./components";
-import { IGalleries } from "types/gallery";
+import { IGalleries, IGallery } from "types/gallery";
 
 interface ImageGalleryProps {
-  imageGallery: IGalleries;
+  imageGalleries: IGalleries;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ imageGallery }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ imageGalleries }) => {
   const [view, setView] = useState("thumbnails");
+  const [currentGallery, setCurentGallery] = useState<IGallery | null>(null);
 
-  const thumbClick = () => {
+  const thumbClick = (imageGallery: IGallery) => {
+    setCurentGallery(imageGallery);
     setView("details");
   };
 
@@ -17,12 +19,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ imageGallery }) => {
     <>
       {view === "thumbnails" && (
         <ImageGalleryThumbnails
-          imageGallery={imageGallery}
+          imageGallery={imageGalleries}
           onClick={thumbClick}
         />
       )}
-      {view === "details" && (
-        <ImageGalleryDetails imageGallery={imageGallery} />
+      {view === "details" && currentGallery && (
+        <ImageGalleryDetails imageGallery={currentGallery} />
       )}
     </>
   );

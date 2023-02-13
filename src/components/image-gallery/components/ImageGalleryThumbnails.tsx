@@ -1,21 +1,11 @@
-import { IGalleries } from "types/gallery";
+import { IGalleries, IGallery } from "types/gallery";
 import ThumbnailsStyled from "./ThumbnailsStyled";
-import { IGallery } from "types/gallery";
+import FirstImage from "./FirstImage";
 
 interface ImageGalleryThumbnailsProps {
   imageGallery: IGalleries;
-  onClick: () => void;
+  onClick: (gallery: IGallery) => void;
 }
-
-const FirstImage: React.FC<{ gallery: IGallery }> = ({ gallery }) => {
-  const image = gallery.galleryImages[0];
-  return (
-    <img
-      src={`${process.env.PUBLIC_URL}/assets/images/${image.src}`}
-      alt={image.name}
-    />
-  );
-};
 
 const ImageGalleryThumbnails: React.FC<ImageGalleryThumbnailsProps> = ({
   imageGallery,
@@ -23,7 +13,7 @@ const ImageGalleryThumbnails: React.FC<ImageGalleryThumbnailsProps> = ({
 }) => (
   <ThumbnailsStyled>
     {Object.keys(imageGallery).map((key: string) => (
-      <div key={key} onClick={onClick}>
+      <div key={key} onClick={() => onClick(imageGallery[key])}>
         <FirstImage gallery={imageGallery[key]} />
         {imageGallery[key].name}
       </div>
