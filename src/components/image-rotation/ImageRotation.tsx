@@ -15,8 +15,6 @@ const ImageRotation = () => {
   const count = useRef(0);
 
   useEffect(() => {
-    console.log(count);
-    console.log(images.length);
     const intervalId = setInterval(() => {
       if (count.current === images.length - 1) {
         count.current = 0;

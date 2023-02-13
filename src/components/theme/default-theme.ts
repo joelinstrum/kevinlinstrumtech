@@ -1,7 +1,7 @@
 // use this import to try different color palettes, then update the defaultTheme json below
 import theme from "./themes/gold-grey-blue";
 
-export const defaultTheme = {
+const defaultTheme = {
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -63,3 +63,5 @@ export const defaultTheme = {
     ].join(","),
   },
 };
+
+export { theme, defaultTheme };
