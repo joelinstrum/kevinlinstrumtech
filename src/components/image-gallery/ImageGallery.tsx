@@ -15,6 +15,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ imageGalleries }) => {
     setView("details");
   };
 
+  const showThumbnails = () => {
+    setView("thumbnails");
+  };
+
   return (
     <>
       {view === "thumbnails" && (
@@ -24,7 +28,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ imageGalleries }) => {
         />
       )}
       {view === "details" && currentGallery && (
-        <ImageGalleryDetails imageGallery={currentGallery} />
+        <ImageGalleryDetails
+          imageGallery={currentGallery}
+          returnClick={showThumbnails}
+        />
       )}
     </>
   );

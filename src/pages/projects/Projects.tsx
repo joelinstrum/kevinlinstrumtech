@@ -18,6 +18,7 @@ const Projects = () => {
   const { gallery, currentIndex } = useSelector(
     (store: RootState) => store.galleryReducer
   );
+
   return (
     <ContainerOuter>
       {isOpen && (
