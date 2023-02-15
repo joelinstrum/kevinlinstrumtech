@@ -1,5 +1,9 @@
+import { useDispatch } from "react-redux";
 import { styled } from "@mui/system";
 import { IGallery } from "types/gallery";
+import { openModal } from "state/features/modalSlice";
+import { TImage } from "types/image";
+import { setGallery, setIndex } from "state/features/gallerySlice";
 
 const ThumbsStyled = styled("div")(() => ({
   "& > ul": {
@@ -25,11 +29,20 @@ interface ThumbsProps {
 }
 
 const Thumbs: React.FC<ThumbsProps> = ({ imageGallery }) => {
+  const dispatch = useDispatch();
+  const onClick = (gallery: TImage[], index: number) => {
+    dispatch(setGallery(gallery));
+    dispatch(setIndex(index));
+    dispatch(openModal(""));
+  };
   return (
     <ThumbsStyled>
       <ul>
         {imageGallery.galleryImages.map((imageObject, i) => (
-          <li key={`${imageObject.name}-${i}`}>
+          <li
+            key={`${imageObject.name}-${i}`}
+            onClick={() => onClick(imageGallery.galleryImages, i)}
+          >
             <img
               src={`${process.env.PUBLIC_URL}/assets/images/${imageObject.src}`}
               alt={imageObject.caption}

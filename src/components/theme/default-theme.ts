@@ -27,25 +27,38 @@ const defaultTheme = {
   palette: {
     background: {
       default: theme.mainBackground,
+      modalOuter: "rgba(0, 0, 0, .8)",
+      modalInner: theme.secondaryLight,
     },
     header: {
       background: theme.headerBackground,
-      color: theme.headerFontColor,
-      linkColor: theme.headerLinkColor,
-      headerBorderColor: theme.headerBorderColor,
-      menuItemsColor: theme.menuItemsColor,
+      color: theme.secondaryColor,
+      linkColor: theme.secondaryColor,
+      headerBorderColor: theme.secondaryLight,
+      menuItemsColor: theme.secondaryDark,
     },
     primary: {
       main: theme.primaryColor,
     },
     secondary: {
       main: theme.secondaryColor,
+      variant: theme.secondaryVariant,
+      light: theme.secondaryLight,
+    },
+    modal: {
+      text: "#eee",
+      backgroundHover: "#eee",
     },
     rotation: {
       titleColor: theme.rotationTitleColor,
       textColor: theme.rotationTextColor,
       backgroundColor: theme.rotationBackground,
       borderColor: theme.primaryColor,
+    },
+    imagePopup: {
+      navBorder: theme.tertiaryColor,
+      navBackground: theme.tertiaryColorVariant,
+      navHover: theme.tertiaryColorDark,
     },
   },
   typography: {

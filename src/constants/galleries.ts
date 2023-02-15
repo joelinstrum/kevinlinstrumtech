@@ -6,6 +6,7 @@ const projectGalleries: IGalleries = {
     description: "We worked hard on this install...",
     location: "Manhatten",
     date: "July 2022",
+    type: "Installation",
     galleryImages: [
       {
         name: "Image install one",
@@ -38,6 +39,7 @@ const projectGalleries: IGalleries = {
     description: "We worked hard on this install...",
     location: "Brooklyn",
     date: "December 2022",
+    type: "Maintenance",
     galleryImages: [
       {
         name: "Image install one",
@@ -52,6 +54,7 @@ const projectGalleries: IGalleries = {
     description: "We worked hard on this install...",
     location: "Brooklyn",
     date: "December 2022",
+    type: "Repair",
     galleryImages: [
       {
         name: "Image install one",
