@@ -1,8 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# How to update this site
 
 In the project directory, you can run:
 
@@ -19,28 +15,31 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm run deploy`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then the build is merged into the gh-pages branch on git. Git has a hook for gh-pages, so when it sees
+a new merge for that branch, it will automatically deploy it to the webserver.
+You generally should see the updated site between 30 and 60 seconds after this command has completed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Updating Text
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All of your site logic is within the *src directory
+Site assets, like images are within the *public directory
 
-### `npm run eject`
+To update the text you see on the site:
+1. Navigate to src/constants
+2. If editing text on a page, select the appropriate page file, ie "src/constants/pageHomeText"
+3. Update as desired -- you can either wrap your text in quotes "like this" or use html tabs <section>like this</section>
+4. Save your text when you are done, then commit, push master, deploy like this:
+   "git commit -am 'Some commit message'", then "npm push origin master", then "npm run deploy"
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Updating images
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+So far, the only images you can update are in the Projects page. Here is how to update:
+1. Navigate to public/assets/images/projects
+2. Create a new folder (not necessary, but makes organizing easier)
+3. Click and drag images into folder
+4. Navigate to src/constants/galleries.ts
+5. The simplest way is to just copy one of the sample galleries and start renaming things
+6. Save changed file(s), then "git commit -am 'Some commit message'", then "npm push origin master", then "npm run deploy"

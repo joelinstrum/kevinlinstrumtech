@@ -10,6 +10,7 @@ const PageBlurbStyled = styled("div")(({ theme }) => ({
   "& > div:nth-of-type(1)": {
     fontSize: "20px",
     fontWeight: "bold",
+    color: theme.palette.secondary.main,
   },
   "& > div:nth-of-type(2)": {
     color: theme.palette.secondary.main,

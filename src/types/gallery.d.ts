@@ -1,6 +1,6 @@
 import { TImage } from "./image";
 
-export interface IGallery {
+interface IGallery {
   name: string;
   description: string;
   galleryImages: TImage[];
@@ -10,6 +10,6 @@ export interface IGallery {
   value?: string;
 }
 
-export interface IGalleries {
+interface IGalleries {
   [key: string]: IGallery;
 }
