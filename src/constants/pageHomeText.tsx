@@ -1,7 +1,7 @@
 import { IPageText } from "types/pages";
 
 const pageHomeText: IPageText = {
-  TITLE: <section>This is a title</section>,
+  TITLE: <section>Experience the white-glove installation treatment</section>,
   TEXT: (
     <div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
