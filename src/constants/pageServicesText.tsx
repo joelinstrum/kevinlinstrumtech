@@ -1,6 +1,6 @@
 const pageServicesText = {
-  TITLE: "Services Title",
-  TEXT: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Elit duis tristique sollicitudin nibh sit amet commodo",
+  TITLE: "Fast and Reliable service - we're there when your system is down.",
+  TEXT: `Intercom down? There's no problem we haven't solved before. Let our team minimize your down time wherever your building is. Call us at (347)986-4298 or email services@kevinlinstrum.tech.`,
 };
 
 export default pageServicesText;
