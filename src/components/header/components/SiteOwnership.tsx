@@ -1,6 +1,6 @@
 const SiteOwnership = () => (
   <li>
-    <span>&copy; KlinsTrim</span>
+    <span>&copy; Klinscorp</span>
   </li>
 );
 
