@@ -51,9 +51,17 @@ const ServiceCalls: React.FC<IForm> = ({ onSubmit, onCancel }) => {
         <div></div>
       </div>
       <div>
-        <div>Number of tenants (approx)</div>
+        <div>Description of problem</div>
         <div>
-          <input {...register("numberOfTenants")} style={{ width: "50px" }} />
+          <textarea
+            {...register("problem", { required: "true" })}
+            rows={3}
+            cols={60}
+            style={{ marginTop: "3px" }}
+          />
+          {errors.lastName && (
+            <span>A description of the problem is required</span>
+          )}
         </div>
       </div>
       <div>
