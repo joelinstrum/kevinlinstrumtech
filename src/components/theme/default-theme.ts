@@ -1,5 +1,6 @@
 // use this import to try different color palettes, then update the defaultTheme json below
 import theme from "./themes/gold-grey-blue";
+import { alpha } from "@mui/material";
 
 const defaultTheme = {
   components: {
@@ -49,6 +50,12 @@ const defaultTheme = {
     modal: {
       text: "#eee",
       backgroundHover: "#eee",
+    },
+    callToAction: {
+      borderColor: theme.callToActionPrimary,
+      borderColorInterior: theme.callToActionSecondary,
+      backgroundColor: alpha(theme.secondaryLight, 0.8),
+      color: theme.primaryFontColor,
     },
     rotation: {
       titleColor: theme.rotationTitleColor,

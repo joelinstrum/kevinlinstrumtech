@@ -5,3 +5,4 @@ export { default as pageProjectsText } from "./pageProjectsText";
 export { default as pageContactText } from "./pageContactText";
 export { default as pageServicesText } from "./pageServicesText";
 export { default as pageAboutText } from "./pageAboutText";
+export { default as forms } from "./forms";

@@ -3,6 +3,8 @@ const goldGreyBlue = {
   primaryFontColor: "#666",
   secondaryColor: "#666",
   secondaryVariant: "#999",
+  callToActionPrimary: "#256cb8",
+  callToActionSecondary: "#333",
   secondaryLight: "#e2e6e7",
   secondaryDark: "#333",
   tertiaryColor: "#0f88f2",

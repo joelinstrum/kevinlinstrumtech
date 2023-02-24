@@ -1,6 +1,9 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import FormStyled from "./FormStyled";
 import { IForm } from "types";
+import { forms } from "../../constants";
 
 const ServiceCalls: React.FC<IForm> = ({ onSubmit, onCancel }) => {
   const {
@@ -9,13 +12,36 @@ const ServiceCalls: React.FC<IForm> = ({ onSubmit, onCancel }) => {
     formState: { errors },
   } = useForm();
 
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = () => {
+    const formObject = form.current || "";
+    console.log(form.current);
+
+    emailjs
+      .sendForm(
+        forms.ServiceForm.serviceId,
+        forms.ServiceForm.templateId,
+        formObject,
+        forms.ServiceForm.publicKey
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const submitHandler = (data: any) => {
-    console.log(data);
     onSubmit<any>(data);
+    sendEmail();
   };
 
   return (
-    <FormStyled onSubmit={handleSubmit(submitHandler)}>
+    <FormStyled onSubmit={handleSubmit(submitHandler)} ref={form}>
       <div>
         <div>First name: </div>
         <div>
@@ -45,10 +71,6 @@ const ServiceCalls: React.FC<IForm> = ({ onSubmit, onCancel }) => {
         <div>
           <input {...register("buildingAddress")} style={{ width: "300px" }} />
         </div>
-      </div>
-      <div>
-        <div></div>
-        <div></div>
       </div>
       <div>
         <div>Description of problem</div>

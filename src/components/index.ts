@@ -1,4 +1,5 @@
 export { default as Assessment } from "./forms/Assessment";
+export { default as CallToAction } from "./call-to-action/CallToAction";
 export { default as ContainerOuter } from "./container-outer/ContainerOuter";
 export { default as ContainerInner } from "./container-inner/ContainerInner";
 export { default as Header } from "./header";
