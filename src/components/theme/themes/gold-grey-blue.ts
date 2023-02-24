@@ -1,5 +1,6 @@
 const goldGreyBlue = {
   primaryColor: "#F4BC16",
+  primaryFontColor: "#666",
   secondaryColor: "#666",
   secondaryVariant: "#999",
   secondaryLight: "#e2e6e7",

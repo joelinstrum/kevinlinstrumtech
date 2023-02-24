@@ -39,6 +39,7 @@ const defaultTheme = {
     },
     primary: {
       main: theme.primaryColor,
+      fontColor: theme.primaryFontColor,
     },
     secondary: {
       main: theme.secondaryColor,
