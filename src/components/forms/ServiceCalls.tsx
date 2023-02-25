@@ -90,10 +90,6 @@ const ServiceCalls: React.FC<IForm> = ({ onSubmit, onCancel }) => {
         <div />
         <div>
           <button type="submit">Submit</button>
-          <span>&nbsp;</span>
-          <button type="button" onClick={onCancel}>
-            &larr; Cancel
-          </button>
         </div>
       </div>
     </FormStyled>

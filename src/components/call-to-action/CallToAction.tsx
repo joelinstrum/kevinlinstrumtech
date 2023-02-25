@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
 
 const CallToActionStyled = styled("div")(({ theme }) => ({
@@ -28,7 +29,11 @@ const CallToActionStyled = styled("div")(({ theme }) => ({
 const CallToAction = () => {
   return (
     <CallToActionStyled>
-      <div>Get A Free Assessment</div>
+      <div>
+        <Link to={`/assessment`} style={{ color: "#333" }}>
+          Get A Free Assessment
+        </Link>
+      </div>
     </CallToActionStyled>
   );
 };

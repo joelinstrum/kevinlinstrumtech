@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ContainerOuter, Header, PageBlurb, ContainerInner } from "components";
 import { pageContactText } from "../../constants";
-import { Assessment, ServiceCalls } from "components";
-import ContactStyled from "./ContactStyled";
-import ContactCard from "./ContactCard";
+import { AssessmentForm } from "components";
 
 const Contact = () => {
-  const [whichForm, setWhichForm] = useState("");
+  const [whichForm, setWhichForm] = useState("Free Assessment");
   const setForm = (formTitle: string) => {
     setWhichForm(formTitle);
   };
@@ -18,28 +16,16 @@ const Contact = () => {
   return (
     <ContainerOuter>
       <Header />
-      <PageBlurb title={pageContactText.TITLE} text={pageContactText.TEXT} />
+
       <ContainerInner>
-        {whichForm === "" && (
-          <ContactStyled>
-            <ContactCard
-              title="Free Assessment"
-              image="clipboard.png"
-              onClick={setForm}
-            />
-            <div> or </div>
-            <ContactCard
-              title="Service Call"
-              image="ServiceWorker.png"
-              onClick={setForm}
-            />
-          </ContactStyled>
-        )}
         {whichForm === "Free Assessment" && (
-          <Assessment onCancel={() => setForm("")} onSubmit={onSubmit} />
-        )}
-        {whichForm === "Service Call" && (
-          <ServiceCalls onCancel={() => setForm("")} onSubmit={onSubmit} />
+          <>
+            <PageBlurb
+              title={pageContactText.TITLE}
+              text={pageContactText.TEXT}
+            />
+            <AssessmentForm onCancel={() => setForm("")} onSubmit={onSubmit} />
+          </>
         )}
         {whichForm === "submitted" && (
           <div style={{ marginTop: "20px" }}>

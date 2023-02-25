@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ROUTES from "utils/routes";
-import { About, Contact, Home, Projects, Services } from "pages";
+import { About, Assessment, Contact, Home, Projects, Services } from "pages";
 import "components/theme/fonts/fonts.scss";
 
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
           <Route path={ROUTES.CONTACT} element={<Contact />} />
           <Route path={ROUTES.PROJECTS} element={<Projects />} />
           <Route path={ROUTES.SERVICES} element={<Services />} />
+          <Route path={ROUTES.ASSESSMENT} element={<Assessment />} />
         </Routes>
       </BrowserRouter>
     </>

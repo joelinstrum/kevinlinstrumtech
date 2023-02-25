@@ -20,10 +20,6 @@ const MENU: IMenu[] = [
     url: "about",
     label: "About",
   },
-  {
-    url: "contact",
-    label: "Contact",
-  },
 ];
 
 export default MENU;

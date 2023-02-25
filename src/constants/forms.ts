@@ -5,9 +5,9 @@ const FORMS = {
     publicKey: "gDFCHcwx8sHFL4gmd",
   },
   AssessmentForm: {
-    serviceId: "",
-    templateId: "",
-    publicKey: "",
+    serviceId: "service_t3qy5sv",
+    templateId: "template_q0dsli9",
+    publicKey: "gDFCHcwx8sHFL4gmd",
   },
 };
 

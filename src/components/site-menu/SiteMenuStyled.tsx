@@ -37,6 +37,7 @@ const SiteMenuStyled = styled("section")(({ theme }) => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        alignItems: "flex-end",
         "& ul": {
           listStyle: "none",
           display: "flex",
