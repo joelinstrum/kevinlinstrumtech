@@ -4,7 +4,7 @@ const FORMS = {
     templateId: "template_hdjwig8",
     publicKey: "DOp11aRpz25cHWNzc",
   },
-  FormStyled: {
+  AssessmentForm: {
     serviceId: "service_b46klu2",
     templateId: "template_rarwdie",
     publicKey: "DOp11aRpz25cHWNzc",
