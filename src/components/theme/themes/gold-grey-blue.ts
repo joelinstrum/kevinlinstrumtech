@@ -22,7 +22,7 @@ const goldGreyBlue = {
   linkColor: "#333",
   linkHover: "#F4BC16",
   thinBannerBackgroundColor: "#F4BC16",
-  thinBannerFontColor: "#000",
+  thinBannerFontColor: "#000fff",
   thinBannerLink: "#0b5396",
 };
 
