@@ -21,9 +21,6 @@ const goldGreyBlue = {
   rotationBackground: "rgba(0, 0, 0, .8)",
   linkColor: "#333",
   linkHover: "#F4BC16",
-  thinBannerBackgroundColor: "#F4BC16",
-  thinBannerFontColor: "#000",
-  thinBannerLink: "#0b5396",
 };
 
 export default goldGreyBlue;

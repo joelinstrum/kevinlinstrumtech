@@ -12,3 +12,4 @@ export { default as ServiceCalls } from "./forms/ServiceCalls";
 export { default as SiteMenu } from "./site-menu";
 export { default as Spacer } from "./spacer";
 export { default as Theme } from "./theme/Theme";
+export { default as ThinBanner } from "./thin-banner/ThinBanner";

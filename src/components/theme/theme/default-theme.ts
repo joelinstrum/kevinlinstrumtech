@@ -1,5 +1,5 @@
 // use this import to try different color palettes, then update the defaultTheme json below
-import theme from "./themes/gold-grey-blue";
+import theme from "./themes/purple-theme";
 import { alpha } from "@mui/material";
 
 const defaultTheme = {
@@ -67,11 +67,6 @@ const defaultTheme = {
       navBorder: theme.tertiaryColor,
       navBackground: theme.tertiaryColorVariant,
       navHover: theme.tertiaryColorDark,
-    },
-    thinBanner: {
-      backgroundColor: theme.thinBannerBackgroundColor,
-      fontColor: theme.thinBannerFontColor,
-      linkColor: theme.thinBannerLink,
     },
   },
   typography: {

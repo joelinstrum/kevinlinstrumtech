@@ -12,6 +12,7 @@ const ContainerOuterStyled = styled("div", {
 })<ContainerOuterStyledProps>(({ style }) => ({
   ...{ width: "100%" },
   ...style,
+  position: "relative",
 }));
 
 const ContainerOuter: FC<ContainerOuterStyledProps> = ({ children, style }) => (
