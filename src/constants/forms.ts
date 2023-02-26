@@ -1,13 +1,13 @@
 const FORMS = {
   ServiceForm: {
-    serviceId: "service_t3qy5sv",
-    templateId: "template_69o2srl",
-    publicKey: "gDFCHcwx8sHFL4gmd",
+    serviceId: "service_b46klu2",
+    templateId: "template_hdjwig8",
+    publicKey: "DOp11aRpz25cHWNzc",
   },
-  AssessmentForm: {
-    serviceId: "service_t3qy5sv",
-    templateId: "template_q0dsli9",
-    publicKey: "gDFCHcwx8sHFL4gmd",
+  FormStyled: {
+    serviceId: "service_b46klu2",
+    templateId: "template_rarwdie",
+    publicKey: "DOp11aRpz25cHWNzc",
   },
 };
 
